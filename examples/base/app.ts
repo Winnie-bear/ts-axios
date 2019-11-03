@@ -108,7 +108,8 @@ axios({
     b: 2
   }
 }).then((res) => {
-  console.log(res)
+  const data = res.data
+  console.log(data, 'test')
 })
 
 axios({
@@ -120,5 +121,5 @@ axios({
     b: 4
   }
 }).then((res) => {
-  console.log(res)
+  const data = res.data
 })

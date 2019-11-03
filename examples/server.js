@@ -22,7 +22,7 @@ app.use(express.static(__dirname))
 
 app.use(bodyParser.json())
 // app.use(bodyParser.text())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended:false }))
 
 const router = express.Router()
 
@@ -57,6 +57,10 @@ function registerBaseRouter () {
   })
 
   router.post('/base/post', function(req, res) {
+    // res.json({
+    //   msg: `hello world`
+    // })
+    console.log(req.body)
     res.json(req.body)
   })
 
